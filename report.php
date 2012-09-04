@@ -10,7 +10,7 @@
 
   <h2>Reflektioner</h2>
   <p>Hade inga större problem med denna första uppgift. Den var tydlig, pedagogisk och lätt att följa. Lite meckigt var det att 
-    behöva chmod:a varje gång man för över en ny fil eller mapp, men så hittade jag en käck bloggpost om detta problem och vips 
+    behöva chmod:a varje gång man för över en ny fil eller mapp, men så hittade jag ett inlägg om just detta här på bloggen och vips 
     så var det problemet löst: 
     <a href="http://db-o-webb.blogspot.se/2009/09/sshstudentbthse-editera-initfilen-vid.html" target="_blank">
       http://db-o-webb.blogspot.se/2009/09/sshstudentbthse-editera-initfilen-vid.html</a></p>
