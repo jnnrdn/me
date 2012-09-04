@@ -34,6 +34,17 @@ nav.navmenu a:link    { }
 nav.navmenu a:visited { }
 nav.navmenu a:hover   { color: #111111; background: #999999; }
 nav.navmenu a:active  { }
+
+img.me {
+  float:left;
+  margin: 0 1.2em 1em 0;
+}
+hr {
+  clear: both;
+}
+p {
+  margin: 0 2em 0.5em 2em ;
+}
 /* footer --------------------------------------------------------
  */
 div#footer a {
