@@ -26,8 +26,7 @@
   <p>Webbläsare är vanligtvis i första hand Chrome, men FF funkar också. Har även de övriga vanliga installerade för test 
     (FF, Opera, Safari). Min gamla windows-dator (Win 7) får tjänstgöra som IE-testmiljö. Som filöverföringsprogram använder jag 
     FileZilla eller Cyberduck. </p>
-  <p>Kan inte klara mig utan versionshantering numera, särskilt inte som det händer att jag jobbar från olika datorer, 
-    så Git har också en given plats i min verktygslåda.</p>
+  <p>Kan inte klara mig utan versionshantering nu för tiden så Git har också en given plats i min verktygslåda.</p>
   <hr>
 
 <?php include("incl/footer.php"); ?>
