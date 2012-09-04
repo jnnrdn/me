@@ -9,6 +9,7 @@
 	<h1>htmlphp-me</h1>
 
 	<p>Här kommer snart min egen fina me-sida. Jag ändrar lite för att testa git. Testar lite till. Och lite till...</p>
+	<p>Gör en ny ändring</p>
 
 	<img src="img/me.jpg" alt="Bild på Jenny Ryden">
 	<hr>
