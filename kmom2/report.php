@@ -27,6 +27,9 @@
     (FF, Opera, Safari). Min gamla windows-dator (Win 7) får tjänstgöra som IE-testmiljö. Som filöverföringsprogram använder jag 
     FileZilla eller Cyberduck. </p>
   <p>Kan inte klara mig utan versionshantering nu för tiden så Git har också en given plats i min verktygslåda.</p>
+  
+  <h1>Kmom02: HTML-element och CSS-konstruktioner</h1>
+
   <hr>
 
 <?php include("incl/footer.php"); ?>
