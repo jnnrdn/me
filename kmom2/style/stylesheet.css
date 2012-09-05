@@ -1,11 +1,11 @@
-html {background: #cc6666;}
+html {background: #cccccc;}
 body {
   margin: 8px auto;
   width: 934px;
   padding: 8px;
   background: #ffffcc;
   border: 1px dashed #000000;
-  font-family: Georgia, serif;
+  font-family: Tahoma, sans-serif;
   color: #333333;
 }
 h1 {
@@ -35,15 +35,22 @@ nav.navmenu a:visited { }
 nav.navmenu a:hover   { color: #111111; background: #999999; }
 nav.navmenu a:active  { }
 
+/* main content --------------------------------------------------
+ */
+
 img.me {
   float:left;
   margin: 0 1.2em 1em 0;
 }
+
 hr {
   clear: both;
 }
+
 p {
   margin: 0 2em 0.5em 0;
+  letter-spacing: 0.06em;
+  line-height: 1.5em;
 }
 /* footer --------------------------------------------------------
  */
