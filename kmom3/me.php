@@ -6,7 +6,7 @@
 
   // Define style thats specific for this page
   $pageStyle = '
-  figure { 
+  div#content article figure { 
    -webkit-border-radius: 10px;
    -moz-border-radius: 10px;
    border-radius: 10px;
