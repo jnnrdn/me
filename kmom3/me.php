@@ -10,10 +10,10 @@
    -webkit-border-radius: 10px;
    -moz-border-radius: 10px;
    border-radius: 10px;
-   /*border-color:#5C0A0A;
-   -moz-box-shadow: 10px 10px 5px #8A0F0F;
-   -webkit-box-shadow: 10px 10px 5px #8A0F0F;
-   box-shadow: 10px 10px 5px #8A0F0F;*/
+   border-color:silver;
+   -moz-box-shadow: 10px 10px 5px silver;
+   -webkit-box-shadow: 10px 10px 5px silver;
+   box-shadow: 5px 5px 10px silver;
   }
   ';
 
