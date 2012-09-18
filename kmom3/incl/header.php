@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="style/stylesheet.css" title="General stylesheet">
   <link rel="alternate stylesheet" type="text/css" href="style/debug.css" title="Debug stylesheet">
   
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="img/favicon.ico">
 
   <!-- Each page can set $pageStyle to create additional style -->
   <?php if(isset($pageStyle)) : ?>

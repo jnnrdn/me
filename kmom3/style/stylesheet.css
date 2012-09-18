@@ -1,5 +1,13 @@
+/* import style for forms
+-------------------------------------------------------- 
+
+*/
+@import url(forms.css);
+
+
 /* general
 --------------------------------------------------------
+
 */
 html,body{margin:0;padding:0;} /* Common margin & padding for all browsers */
 html{overflow-y:scroll;} /* Always display the scrollbar, avoid flipping pages */
