@@ -76,7 +76,9 @@ header#top {
 
 
 /* add common padding to main content block */
-div#content{}
+div#content{
+  min-height: 275px;
+}
 
 /* Container -----------------------------------------------------
 */
@@ -107,7 +109,7 @@ footer.byline img {padding:2px;outline:#999999 groove 1px;}
 div#footer {
   padding-top: 2em;
   background: -webkit-gradient(linear, left top, left bottom, from(#909090), to(#fff)); 
-  background: -moz-linear-gradient(top,  #909090,  #fff);
+  background: -moz-linear-gradient(top,  #909090,  #fff); 
 }
 footer#bottom {
   padding-bottom: 2em;
