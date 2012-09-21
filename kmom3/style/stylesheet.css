@@ -52,6 +52,7 @@ aside,figure,figcaption{display:block;}
 
 /* the header with related links navigation */
 header#above {
+  padding: 5px;
   border-bottom:1px solid #B0B0B0;
   color:#000;
   background: rgba(224,224,224,0.75);
@@ -136,6 +137,13 @@ div#logo {
 -------------------------------------------------------- 
 
 */
+nav.related a:link {
+  font-size: 75%;
+  color: #333;
+}
+nav.related a:hover {
+  color: blue;
+}
 
 nav.related a.active {
   color: #333;
