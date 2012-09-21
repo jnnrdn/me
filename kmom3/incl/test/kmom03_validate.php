@@ -58,7 +58,7 @@
         echo "<p>Kontot är EJ definerat.</p>";
     }
     if(empty($_POST['account'])) {
-        echo "<p>Variabeln <code>\$_POST</code> är tom.</p>";
+        echo "<p>Variabeln <code>$_POST</code> är tom.</p>";
     }
     else {
         echo "<p>Variabeln <code>$_POST</code> är inte tom.</p>";
