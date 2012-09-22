@@ -11,6 +11,7 @@
       <li><a href="test.php?p=kmom03_postform">kmom03_postform.php</a></li>
       <li><a href="test.php?p=kmom03_validate">kmom03_validate.php</a></li>
       <li><a href="test.php?p=kmom03_server">kmom03_server.php</a></li>
+      <li><a href="test.php?p=kmom03_sessiondestroy">Förstör sessionen</a></li>
   </ul>
 
 </nav>
