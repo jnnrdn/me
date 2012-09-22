@@ -137,6 +137,9 @@ div#logo {
 -------------------------------------------------------- 
 
 */
+nav ul li {
+  list-style-type: none;
+}
 nav.related a:link {
   font-size: 75%;
   color: #333;
@@ -174,7 +177,8 @@ nav.navmenu a:active  { }
 body#me a#me-,
 body#report a#report-,
 body#guide a#guide-,
-body#source a#source- {background:#858585;border:2px solid #656565;}
+body#source a#source-,
+body#test a#test- {background:#858585;border:2px solid #656565;}
 
 /* figure & figcaption
 -------------------------------------------------------- 
@@ -203,3 +207,17 @@ img.me {
 /* clearer fix */
 div#content {overflow:auto;}
 
+#test nav.left {
+  width: 25%;
+  float:left;
+}
+#test nav.left ul {
+  padding:0 ;
+}
+#test article.left {
+  width: 75%;
+  float:left;
+}
+#test div#content {
+
+}

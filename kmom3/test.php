@@ -1,47 +1,53 @@
 <?php 
   include("incl/config.php"); 
 
-  $title = "Min Me-sida om mig själv"; 
   $pageId = "test";
 
-  // Define style thats specific for this page
-  $pageStyle = '
-    nav#left-menu { 
-     width: 30%;
-     float: left;
-    }
-    article {
-     width: 65%;
-     padding: 10px;
-     float: left;
-    }
-  ';
+  include("incl/header.php");
 
-  include("incl/header.php"); 
+  // Is the page known?
+  $path = "incl/test";
+  $file = null;
+  // Check if the url contains a querystring with a page-part.
+  $p = null;
+  if(isset($_GET["p"])) 
+  {
+    $p = $_GET["p"];
+  }
+
+  if($p == "kmom03_get") 
+  {
+    $title   = "Tester kmom03: Visa \$_GET";
+    $file    = "kmom03_get.php";
+  }
+  else if ($p == "kmom03_getform") 
+  {
+    $title   = "Tester kmom03: Visa \$_GET form";
+    $file    = "kmom03_getform.php";
+  } 
+  else if ($p == "kmom03_postform") 
+  {
+    $title   = "Tester kmom03: Visa \$_POST";
+    $file    = "kmom03_postform.php";
+  } 
+  else if ($p == "kmom03_validate") 
+  {
+    $title   = "Tester kmom03: Visa \$_GET";
+    $file    = "kmom03_validate.php";
+  } 
+  else
+  {
+    $title   = "Tester";
+    $file    = "default.php";
+  }
 ?>
 
-<div id="content">
-  <nav id="left-menu">
-    <h3>kmom2</h3>
-      <ul>
-        <li></li>
-      </ul>
-
-    <h3>kmom3</h3>
-    <ul>
-        <li></li>
-    </ul>
-
-  </nav>
-  <article>
-    <h1>Testfall för kursen</h1>
-    
-    <p>Detta är min testsida. </p>
-
-  </article> 
-  <?php include("incl/byline.php"); ?>
+<div id="content"> 
+  <?php include("incl/test/aside.php"); ?>
+  <article class="left">
+    <?php include("$path/$file"); ?>
+    <?php include("incl/byline.php"); ?>
+  </article>
 </div> <!-- end content -->
-
-
 
 <?php include("incl/footer.php"); ?>

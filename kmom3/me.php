@@ -41,6 +41,4 @@
   <?php include("incl/byline.php"); ?>
 </div> <!-- end content -->
 
-
-
 <?php include("incl/footer.php"); ?>
