@@ -1,28 +1,5 @@
-<?php 
-  include("incl/config.php"); 
-
-  $title = "Formulär och post-metoden"; 
-  $pageId = "form_post";
-
-  // Define style thats specific for this page
-  $pageStyle = '
-  div#content article figure { 
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-   border-radius: 10px;
-   border-color:silver;
-   -moz-box-shadow: 10px 10px 5px silver;
-   -webkit-box-shadow: 10px 10px 5px silver;
-   box-shadow: 5px 5px 10px silver;
-  }
-  ';
-
-  include("incl/header.php"); 
-?>
-<div id="content">
-  
-  <h1>Formulär och post-metoden</h1>
-  <form method="post" action="?">
+<h1>Formulär och post-metoden</h1>
+  <form method="post" action="?p=kmom03_validate">
     <fieldset>
       <legend>Exempel på formulär med post-metoden</legend>
       <p>
@@ -35,9 +12,7 @@
       </p>
       <p>
         <input type="submit" name="doLogin" value="Login">
-      </p>
-
-      
+      </p> 
     </fieldset>
 
   </form>
@@ -57,20 +32,24 @@
     } else {
         echo "<p>Kontot är EJ definerat.</p>";
     }
+
     if(empty($_POST['account'])) {
         echo "<p>Variabeln <code>$_POST</code> är tom.</p>";
     }
     else {
         echo "<p>Variabeln <code>$_POST</code> är inte tom.</p>";
     }
-    if(is_numeric($_POST['password'])) {
-        echo "<p>Lösenordet är numeriskt.</p>";
-    }
-    else {
-        echo "<p>Lösenordet är inte numeriskt.</p>";
-    }
-    echo "Kontot ser ut så här: '" . strip_tags($_POST['account']) . "' utan taggar";
-  ?>
-</div>
 
-<?php include("incl/footer.php"); ?>
+    if(isset($_POST['password'])) {
+      if(is_numeric($_POST['password'])) {
+        echo "<p>Lösenordet är numeriskt.</p>";
+      }
+      else {
+          echo "<p>Lösenordet är inte numeriskt.</p>";
+      }
+    }
+
+    if (isset($_POST['account'])) {
+      echo "Kontot ser ut så här: '" . strip_tags($_POST['account']) . "' utan taggar";
+    }
+  ?>
