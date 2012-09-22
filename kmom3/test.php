@@ -10,8 +10,12 @@
   {
     $p = $_GET["p"];
   }
-
-  if($p == "kmom03_get") 
+  if($p == "kmom02_pagestyle") 
+  {
+    $title   = "Tester kmom02: Visa olika styles med \$pageStyle";
+    $file        = "kmom02_pagestyle.php";
+  }
+  else if($p == "kmom03_get") 
   {
     $title = "Tester kmom03: Visa \$_GET";
     $file = "kmom03_get.php";

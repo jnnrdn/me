@@ -1,7 +1,7 @@
 <nav id="left-menu" class="left">
   <h3>kmom2</h3>
     <ul>
-      <li></li>
+      <li><a href="test.php?p=kmom02_pagestyle">kmom02_pagestyle.php</a></li>
     </ul>
 
   <h3>kmom3</h3>
