@@ -223,6 +223,14 @@ div#content {overflow:auto;}
 #test article.left {
   width: 70%;
 }
-#test div#content {
 
+blockquote.code {
+  font-family: monospace;
+  white-space: pre;
+  background: #F2F2F2;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0.5em;
+  border: 1px solid #999;
+  overflow: auto;
 }

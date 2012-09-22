@@ -12,8 +12,8 @@
   }
   if($p == "kmom02_pagestyle")
   {
-    $title   = "Tester kmom02: Visa olika styles med \$pageStyle";
-    $file        = "kmom02_pagestyle.php";
+    $title = "Tester kmom02: Visa olika styles med \$pageStyle";
+    $file = "kmom02_pagestyle.php";
   }
   else if($p == "kmom03_get")
   {
@@ -39,7 +39,13 @@
   {
     $title = "Tester kmom03: Visa \$_SERVER";
     $file = "kmom03_server.php";
-  } 
+  }
+  else if ($p == "kmom03_sessiondestroy") 
+  {
+    $title = "Tester kmom03: Förstör sessionen";
+    $file = "kmom03_sessiondestroy.php";
+    destroySession();
+  }
   else
   {
     $title = "Tester";
