@@ -16,7 +16,6 @@
 <!-- Sidans/Dokumentets huvudsakliga innehåll -->
 <div id="content">
   <?php echo "$sourceBody"; ?>
-  <hr>
 </div>
 
 <?php include("incl/footer.php"); ?>

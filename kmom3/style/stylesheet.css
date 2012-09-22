@@ -166,6 +166,7 @@ nav.navmenu {
 nav.navmenu a {
     padding: 0.5em 1em 0.1em 1em;
     color: #555555;
+    font-size: 1em;
     text-decoration:none;
 }
 nav.navmenu a:link    { }
@@ -181,7 +182,7 @@ body#me a#me-,
 body#report a#report-,
 body#guide a#guide-,
 body#source a#source-,
-body#test a#test- {background:#858585;border:2px solid #656565; padding: 5px;}
+body#test a#test- {background:#858585;border:2px solid #656565; }
 
 /* figure & figcaption
 -------------------------------------------------------- 
@@ -212,14 +213,12 @@ div#content {overflow:auto;}
 
 #test nav.left {
   width: 25%;
-  float:left;
 }
 #test nav.left ul {
   padding:0 ;
 }
 #test article.left {
-  width: 75%;
-  float:left;
+  width: 70%;
 }
 #test div#content {
 
