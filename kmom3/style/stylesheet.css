@@ -103,6 +103,9 @@ footer.byline {
   font-size: smaller;
   font-style:italic;
 }
+footer.byline blockquote {
+    font-family: 'Times New Roman', serif;
+}
 footer.byline img {padding:2px;outline:#999999 groove 1px;}
 
 /* footer --------------------------------------------------------
