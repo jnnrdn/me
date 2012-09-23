@@ -61,7 +61,10 @@
       Det blev lite väl mycket "serverat" så att säga, dock finns det ju fortfarande mycket att lära av att studera koden.</p>
 
     <p>Jättebra att få repetition på de olika fördefinierade variablerna, querystrings osv. De är så pass användbara att 
-      det alltid är bra att friska upp minnet på det området.</p>
+      det alltid är bra att friska upp minnet på det området. PHP-guiden är till stor hjälp, kortfattad med bra beskrivningar.</p>
+
+    <p>Trivs mer och mer med PHP, det är så kul att lära sig om alla möjligheter som språket erbjuder! Och det finns alltid mer att lära,
+      vilket passar mig jättebra. Språk som jag tidigare programmerat i är C# och JavaScript.</p>
 
     <p>Login-sidan var en kul utmaning, det var inga problem att få till den trots att den verkade klurig från början.</p>
   </article>
