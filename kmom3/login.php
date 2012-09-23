@@ -3,7 +3,6 @@ include("incl/config.php");
 $pageId = "login";
 $title = "Status login/logout";
 
-
 // Check if the url contains a querystring with a page-part.
 $p = null;
 if(isset($_GET["p"])) 
@@ -32,10 +31,10 @@ else
 
 ?>
 
-
 <?php include("incl/header.php"); ?>
+
 <div id="content">
-  <div class="left border" style="width:80%;">
+  <div class="left border" style="width:100%;">
 
     <?php if(isset($content)):
       echo $content;
@@ -52,7 +51,6 @@ else
       <?php endif; ?>  
     <?php endif; ?>
 
-    <hr>
   </div>
 </div>
 <?php include("incl/footer.php"); ?>

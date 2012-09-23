@@ -65,7 +65,7 @@ function userLoginMenu() {
 function userLoginForm($output=null, $outputClass=null) {
 
   if(isset($output)) {
-    $output = "<p class='right' style='width:300px;'><output class='$outputClass'>$output</output></p>";
+    $output = "<p class='right' style='width:200px;'><output class='$outputClass'>$output</output></p>";
   }
 
   $disabled = null;

@@ -157,7 +157,7 @@ EOD;
 //
 // Verify the input variable _GET, no tampering with it
 //
-$source_currentdir	= isset($_GET['dir']) ? preg_replace('/[\/\\\]/', $SEPARATOR, strip_tags(trim($_GET['dir']))) : '';
+$source_currentdir	= isset($_GET['dir']) ? preg_replace("/[\/\\\]/", $SEPARATOR, strip_tags(trim($_GET['dir']))) : '';
 
 $source_fullpath1 	= realpath($BASEDIR);
 $source_fullpath2 	= realpath($BASEDIR . $source_currentdir);

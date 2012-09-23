@@ -44,7 +44,7 @@ a:active  { }
 --------------------------------------------------------
 */
 header,footer,nav,article,section,
-aside,figure,figcaption{display:block;}
+aside,figure,figcaption,output {display:block;}
 
 
 /* page structure
@@ -207,9 +207,17 @@ img.me {
 -------------------------------------------------------- 
 
 */
-.right {float:right;}
+.right {float:right; margin-right: 20px;}
 .left {float:left;}
 
+.small {
+  font-size: .8em;
+  margin-bottom: 1.875em;
+  line-height: 1.875em;
+}
+.quiet {
+  color: #666; font-family: 'Times New Roman', serif;
+}
 
 /* clearer fix */
 div#content {overflow:auto;}
