@@ -1,6 +1,7 @@
 <?php 
 include("incl/config.php");
 $pageId = "login";
+$title = "Status login/logout";
 
 
 // Check if the url contains a querystring with a page-part.
