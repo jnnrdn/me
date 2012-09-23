@@ -20,7 +20,8 @@
       </p>
        <p>Guider:
         <a href="http://dbwebb.se/htmlphp/me/kmom02/guide.php?id=html20">HTML-20</a>
-        <a href="http://dbwebb.se/htmlphp/me/kmom02/guide.php?id=css20">CSS-20</a> 
+        <a href="http://dbwebb.se/htmlphp/me/kmom02/guide.php?id=css20">CSS-20</a>
+        <a href="http://dbwebb.se/htmlphp/me/kmom03/guide.php?id=php20">PHP-20</a> 
       </p>
       <?php if(isset($pageTimeGeneration)) : ?>
         <p>Page generated in <?php echo round(microtime(true)-$pageTimeGeneration, 5); ?> seconds</p>

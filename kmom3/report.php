@@ -9,7 +9,7 @@
 
 <div id="content">
   <article>
-    <h1>Kmom01: Kom igång med HTML, CSS och PHP</h1>
+    <h1 id="kmom1">Kmom01: Kom igång med HTML, CSS och PHP</h1>
     <p>Hade inga större problem med denna första uppgift. Den var tydlig, pedagogisk och lätt att följa. Lite meckigt var det att 
       behöva chmod:a varje gång man för över en ny fil eller mapp, men så hittade jag ett 
       <a href="http://db-o-webb.blogspot.se/2009/09/sshstudentbthse-editera-initfilen-vid.html" target="_blank">inlägg</a> om just detta här på bloggen och vips 
@@ -29,7 +29,7 @@
   </article> 
 
   <article>
-    <h1>Kmom02: HTML-element och CSS-konstruktioner</h1>
+    <h1 id="kmom2">Kmom02: HTML-element och CSS-konstruktioner</h1>
     <p>Momentet fungerade rätt så bra, hade inga större problem. Hade lite problem med att få faviconen att visas. 
       Lade den in img-mappen, men av någon märklig anledning visades den inte efter att jag laddat upp sidan på BTH-servern, 
       trots att jag hade rätt sökväg i header. php (funkade på min lokala som har samma struktur). Efter att ha testat att rensat webbläsarens cache
@@ -50,8 +50,9 @@
 
     <p>Strukturen av mapparna i Me-sidan känns logisk och jag tycker den underlättar överblicken av sajten.</p>
   </article>
+
   <article>
-    <h1>Kmom03: Dynamisk webbplats med PHP</h1>
+    <h1 id="kmom3">Kmom03: Dynamisk webbplats med PHP</h1>
     <p>Denna uppgift var både rolig och lite klurig! Fick ordning på min favicon, testade att flytta den till img-mappen igen.
       Förmodligen hade jag missat något i sökvägen trots allt, för nu funkade den även på servern.</p>
 
