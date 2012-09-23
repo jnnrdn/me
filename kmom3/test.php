@@ -10,37 +10,37 @@
   {
     $p = $_GET["p"];
   }
-  if($p == "kmom02_pagestyle")
+  if($p == "kmom02-pagestyle")
   {
     $title = "Tester kmom02: Visa olika styles med \$pageStyle";
     $file = "kmom02_pagestyle.php";
   }
-  else if($p == "kmom03_get")
+  else if($p == "kmom03-get")
   {
     $title = "Tester kmom03: Visa \$_GET";
     $file = "kmom03_get.php";
   }
-  else if ($p == "kmom03_getform")
+  else if ($p == "kmom03-getform")
   {
     $title = "Tester kmom03: Visa \$_GET form";
     $file = "kmom03_getform.php";
   } 
-  else if ($p == "kmom03_postform")
+  else if ($p == "kmom03-postform")
   {
     $title = "Tester kmom03: Visa \$_POST";
     $file = "kmom03_postform.php";
   } 
-  else if ($p == "kmom03_validate")
+  else if ($p == "kmom03-validate")
   {
     $title = "Tester kmom03: Visa \$_GET";
     $file = "kmom03_validate.php";
   }
-  else if ($p == "kmom03_server")
+  else if ($p == "kmom03-server")
   {
     $title = "Tester kmom03: Visa \$_SERVER";
     $file = "kmom03_server.php";
   }
-  else if ($p == "kmom03_sessiondestroy") 
+  else if ($p == "kmom03-sessiondestroy") 
   {
     $title = "Tester kmom03: Förstör sessionen";
     $file = "kmom03_sessiondestroy.php";
