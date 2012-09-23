@@ -4,6 +4,7 @@
   $title = "Visa källkod";
   $pageId = "source";
 
+
   // Include code from source.php to display sourcecode-viewer
   $sourceBasedir=dirname(__FILE__);
   $sourceNoEcho=true;

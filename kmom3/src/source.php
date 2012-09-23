@@ -157,7 +157,7 @@ EOD;
 //
 // Verify the input variable _GET, no tampering with it
 //
-$source_currentdir	= isset($_GET['dir']) ? preg_replace('/[\/\\\]/', $SEPARATOR, strip_tags(trim($_GET['dir']))) : '';
+$source_currentdir	= isset($_GET['dir']) ? preg_replace("/[\/\\\]/", $SEPARATOR, strip_tags(trim($_GET['dir']))) : '';
 
 $source_fullpath1 	= realpath($BASEDIR);
 $source_fullpath2 	= realpath($BASEDIR . $source_currentdir);
@@ -370,6 +370,13 @@ $source_pageCharset = "utf-8";
 $source_pageLanguage = "en";
 $sourceBody=$source_html;
 $sourceStyle=<<<EOD
+ 		div#content p code a,
+ 		div#content h3 code a {
+ 			font-size: 100%;
+ 		}
+ 		div#content h3 code a {
+ 			font-weight: bold;
+ 		}
  		div.container {
 			min-width: 40em;
  		}
