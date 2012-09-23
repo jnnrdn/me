@@ -46,6 +46,16 @@
     $file = "kmom03_sessiondestroy.php";
     destroySession();
   }
+  else if ($p == "kmom03-sessionchange")
+  {
+    $title = "Tester kmom03: Ändra \$_SESSION";
+    $file = "kmom03_sessionchange.php";
+  }  
+  else if ($p == "kmom03-showsession")
+  {
+    $title = "Tester kmom03: Visa \$_SESSION";
+    $file = "kmom03_session.php";
+  }
   else
   {
     $title = "Tester";

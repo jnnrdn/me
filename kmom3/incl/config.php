@@ -5,4 +5,5 @@ session_start();
 
 include_once(dirname(__FILE__) . '/../src/common.php');
 
+// Turn on error reporting
 error_reporting(-1);

@@ -12,6 +12,8 @@
       <li><a href="test.php?p=kmom03-validate">Validera inmatning</a></li>
       <li><a href="test.php?p=kmom03-server">Kolla innehåll i SERVER</a></li>
       <li><a href="test.php?p=kmom03-sessiondestroy">Förstör sessionen</a></li>
+      <li><a href="test.php?p=kmom03-sessionchange">Ändra sessionen</a></li>
+      <li><a href="test.php?p=kmom03-showsession">Visa innehållet i SESSION</a></li>
   </ul>
 
 </nav>
