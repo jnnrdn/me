@@ -28,16 +28,19 @@
 
 <!-- Above header -->
 <header id="above">
-  <!-- Relateted links -->
-  <nav class="related">
-    <a href="../kmom1/me.php">kmom01</a>
-    <a href="../kmom2/me.php">kmom02</a>
-    <a class="active" href="../kmom3/me.php">kmom03</a>
-  </nav>
+
   <nav class="login right">
     <!-- login & logout menu -->
     <?php echo userLoginMenu(); ?>
   </nav>
+
+  <nav class="related">
+    <!-- Relateted links -->
+    <a href="../kmom1/me.php">kmom01</a>
+    <a href="../kmom2/me.php">kmom02</a>
+    <a class="active" href="../kmom3/me.php">kmom03</a>
+  </nav>
+
 </header>
 
 <!-- Header -->
