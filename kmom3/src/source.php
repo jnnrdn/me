@@ -370,6 +370,13 @@ $source_pageCharset = "utf-8";
 $source_pageLanguage = "en";
 $sourceBody=$source_html;
 $sourceStyle=<<<EOD
+ 		div#content p code a,
+ 		div#content h3 code a {
+ 			font-size: 100%;
+ 		}
+ 		div#content h3 code a {
+ 			font-weight: bold;
+ 		}
  		div.container {
 			min-width: 40em;
  		}
