@@ -214,6 +214,11 @@ img.me {
 /* clearer fix */
 div#content {overflow:auto;}
 
+
+/* Test pages
+--------------------------------------------------------
+
+*/
 #test nav.left {
   width: 25%;
 }
@@ -222,9 +227,10 @@ div#content {overflow:auto;}
 }
 #test article.left {
   width: 70%;
+}
+#test div.ofx {
   overflow-x: scroll;
 }
-
 #test table,
 blockquote.code {
   font-family: monospace;
