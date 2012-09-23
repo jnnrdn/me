@@ -50,5 +50,19 @@
 
     <p>Strukturen av mapparna i Me-sidan känns logisk och jag tycker den underlättar överblicken av sajten.</p>
   </article>
+  <article>
+    <h1>Kmom03: Dynamisk webbplats med PHP</h1>
+    <p>Denna uppgift var både rolig och lite klurig! Fick ordning på min favicon, testade att flytta den till img-mappen igen.
+      Förmodligen hade jag missat något i sökvägen trots allt, för nu funkade den även på servern.</p>
+
+    <p>Multisidan var lite meckig, men inte så svår som det först verkade. Saknade en ordentlig beskrivning av hur den var tänkt
+      att fungera (lite mer som ett use case), så kände inte att jag fick en egentlig möjlighet att försöka klura ut en lösning på egen hand.
+      Det blev lite väl mycket "serverat" så att säga, dock finns det ju fortfarande mycket att lära av att studera koden.</p>
+
+    <p>Jättebra att få repetition på de olika fördefinierade variablerna, querystrings osv. De är så pass användbara att 
+      det alltid är bra att friska upp minnet på det området.</p>
+
+    <p>Login-sidan var en kul utmaning, det var inga problem att få till den trots att den verkade klurig från början.</p>
+  </article>
 </div> <!-- End 'content' div -->
 <?php include("incl/footer.php"); ?>
