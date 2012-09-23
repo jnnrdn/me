@@ -12,5 +12,4 @@ visa sedan innehållet i sessionen, kör därefter denna sidan igen och studera 
   {
     $_SESSION['counter'] = 1;
   }
-
 ?>
