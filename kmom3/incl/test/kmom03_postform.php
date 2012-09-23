@@ -1,5 +1,5 @@
 <h1>Formulär och post-metoden</h1>
-  <form method="post" action="?p=kmom03_postform">
+  <form method="post" action="?p=kmom03-postform">
     <fieldset>
       <legend>Exempel på formulär med post-metoden</legend>
       <p>
