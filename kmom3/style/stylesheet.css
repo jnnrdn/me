@@ -222,15 +222,18 @@ div#content {overflow:auto;}
 }
 #test article.left {
   width: 70%;
+  overflow-x: scroll;
 }
 
+#test table,
 blockquote.code {
   font-family: monospace;
+  font-size: 90%;
   white-space: pre;
   background: #F2F2F2;
   margin-left: 0;
   margin-right: 0;
   padding-left: 0.5em;
   border: 1px solid #999;
-  overflow: auto;
+  line-height: 1.2em;
 }
