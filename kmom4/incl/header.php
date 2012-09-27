@@ -6,9 +6,13 @@
   <title><?php echo $title ?></title>
 
   <!-- Links to external style sheets -->
-  <link rel="stylesheet" type="text/css" href="style/stylesheet.css" title="General stylesheet">
-  <link rel="alternate stylesheet" type="text/css" href="style/debug.css" title="Debug stylesheet">
-  
+  <?php if(isset($_SESSION['stylesheet'])): ?>
+    <link rel="stylesheet" href="style/<?php echo $_SESSION['stylesheet']; ?>">
+  <?php else: ?>
+    <link rel="stylesheet" type="text/css" href="style/stylesheet.css" title="General stylesheet">
+    <link rel="alternate stylesheet" type="text/css" href="style/debug.css" title="Debug stylesheet">
+  <?php endif; ?>
+
   <link rel="shortcut icon" href="img/favicon.ico">
 
   <!-- Each page can set $pageStyle to create additional style -->
