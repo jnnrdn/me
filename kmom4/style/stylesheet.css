@@ -64,7 +64,6 @@ header#above {
   -moz-box-shadow: 0px 2px 5px #888;
   -webkit-box-shadow: 0px 2px 5px #888;
   box-shadow: 0px 2px 5px #888;
-  
 }
 header#top, div#content, div#footer {
   width: 800px;
@@ -77,7 +76,6 @@ header#top, div#content, div#footer {
 header#top {
   padding-top: 2em;
 }
-
 
 /* add common padding to main content block */
 div#content{
