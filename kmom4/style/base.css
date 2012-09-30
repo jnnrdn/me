@@ -1,4 +1,20 @@
 /*  ================================================================================
+    CSS reset
+    ================================================================================ */
+html, body, div, span, h1, h2, h3, h4, p, blockquote, 
+a, code, em, img, strong, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, 
+tfoot, thead, tr, th, td, article, aside, figure, 
+figcaption, footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*  ================================================================================
     General
     ================================================================================ */
 
@@ -7,28 +23,41 @@ html{overflow-y:scroll;} /* Always display the scrollbar, avoid flipping pages *
 body {
   font-family: Arial, sans-serif;
   color: #303030;
+  line-height: 1.5em;
 }
 
 h1, h2, h3, h4 {
-  font-family: Georgia, serif;
+  font-family: 'Times New Roman', serif;
   color: #606060;
+  padding: 1.2em 0 1em 0;
 }
-h1 { font-size: 2em; line-height: 1.2em;}
-h2 { font-size: 1.8em;}
+h1 { font-size: 2em;  line-height: 0.5em;}
+h2 { font-size: 1.8em; line-height: 0.55em;}
+h3 { font-size: 1.5em; line-height: 0.66em;}
 
-p { margin: 0 2em 0.5em 0;}
+
+p, ol, ul, blockquote, pre, code {
+  font: normal 14px/1.5em Arial, Helvetica, sans-serif;
+  margin-bottom: 1.5em;
+}
+
 
 img { border:0; } /* No border around linked images */
 
 a:link    { color: #606060; text-decoration: none;}
-a:visited { }
-a:hover   { text-decoration:underline; color: #333333;}
-a:active  { }
+a:visited { color: #303030;}
+a:hover   { text-decoration:underline;}
+a:active  { color: #333333;}
+
+ul, ol, dl {
+  margin-left: 1em;
+}
 
 blockquote {
   font-family: serif;
   font-style: italic;
   color: #606060;
+  margin: 0.5em 0 0.5em 2em;
 }
 
 /*  ================================================================================
@@ -47,5 +76,22 @@ div#content,
 div#footer {
   margin: 0 auto;
   width: 800px;
-  margin-bottom: 2em;
+  padding: 0.5em;
+}
+div#footer p {
+  line-height: 0.2em;
+}
+/*  ================================================================================
+    Components
+    ================================================================================ */
+nav.navmenu {
+  padding: 1em 0 0 0;
+}
+
+/*  ================================================================================
+    Forms
+    ================================================================================ */
+
+fieldset {
+  margin: 1em 0;
 }
