@@ -42,7 +42,8 @@
     <!-- Relateted links -->
     <a href="../kmom1/me.php">kmom01</a>
     <a href="../kmom2/me.php">kmom02</a>
-    <a class="active" href="../kmom3/me.php">kmom03</a>
+    <a href="../kmom3/me.php">kmom03</a>
+    <a class="active" href="../kmom4/me.php">kmom04</a>
   </nav>
 
 </header>

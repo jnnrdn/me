@@ -163,6 +163,7 @@ nav.related a.active {
   color: #333;
   text-decoration: none;
   cursor: default;
+  font-weight: bold;
 }
 
 nav.navmenu {
