@@ -4,19 +4,22 @@
 
 html,body{margin:0;padding:0;} /* Common margin & padding for all browsers */
 html{overflow-y:scroll;} /* Always display the scrollbar, avoid flipping pages */
-html {}
 body {
   font-family: Arial, sans-serif;
   color: #303030;
 }
+
 h1, h2, h3, h4 {
   font-family: Georgia, serif;
   color: #606060;
 }
 h1 { font-size: 2em; line-height: 1.2em;}
 h2 { font-size: 1.8em;}
+
 p { margin: 0 2em 0.5em 0;}
+
 img { border:0; } /* No border around linked images */
+
 a:link    { color: #606060; text-decoration: none;}
 a:visited { }
 a:hover   { text-decoration:underline; color: #333333;}
