@@ -1,48 +1,48 @@
-/* 
-* General
-*
-*/
+/*  ================================================================================
+    General
+    ================================================================================ */
+
 html,body{margin:0;padding:0;} /* Common margin & padding for all browsers */
 html{overflow-y:scroll;} /* Always display the scrollbar, avoid flipping pages */
 html {}
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   color: #303030;
 }
 h1, h2, h3, h4 {
   font-family: Georgia, serif;
   color: #606060;
 }
-h1 { font-size: 1.8em; line-height: 1.5em;}
-h2 { font-size: 1.5em;}
+h1 { font-size: 2em; line-height: 1.2em;}
+h2 { font-size: 1.8em;}
 p { margin: 0 2em 0.5em 0;}
 img { border:0; } /* No border around linked images */
-
-/* Länkar */
 a:link    { color: #606060; text-decoration: none;}
 a:visited { }
 a:hover   { text-decoration:underline; color: #333333;}
 a:active  { }
 
 blockquote {
-  font-family: 'Times New Roman', serif;
+  font-family: serif;
   font-style: italic;
   color: #606060;
 }
 
+/*  ================================================================================
+    HTML 5 elements
+    ================================================================================ */
 
-/*
-* Layout
-*
-*/
-header#top,
-div#content{
-  margin: 0 auto;
-  width: 800px;
-}
-
-/* html5 elements
---------------------------------------------------------
-*/
 header,footer,nav,article,section,
 aside,figure,figcaption,output {display:block;}
+
+/*  ================================================================================
+    Layout
+    ================================================================================ */
+
+header#top,
+div#content,
+div#footer {
+  margin: 0 auto;
+  width: 800px;
+  margin-bottom: 2em;
+}

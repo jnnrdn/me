@@ -88,6 +88,13 @@ article p {
   letter-spacing: 0.05em;
   line-height: 1.2em;
 }
+div#content aside.left {
+  width: 22%;
+}
+div#content article.right {
+  width: 72%;
+}
+
 /* article byline & signature
 -------------------------------------------------------- 
 
