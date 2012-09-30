@@ -1,5 +1,5 @@
 <h1>Formulär och get-metoden</h1>
-<form method="get" action="?p=kmom03_getform">
+<form method="get" action="?p=kmom03-getform">
   <fieldset>
     <legend>Exempel på formulär med get-metoden</legend>
     <p>
