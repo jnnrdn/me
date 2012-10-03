@@ -79,7 +79,7 @@ header#top {
 
 /* add common padding to main content block */
 div#content{
-  min-height: 275px;
+  min-height: 300px;
 }
 
 /* Container -----------------------------------------------------
