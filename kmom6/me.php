@@ -24,7 +24,7 @@
   <article>
     <h1>Om mig</h1>
 
-    <figure class="left top">
+    <figure class="right top">
       <img src="img/me.jpg" alt="Bild på Jenny Ryden" class="me">
       <figcaption>
         <p>Bild: En bild på mej.</p>
