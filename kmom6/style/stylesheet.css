@@ -1,0 +1,292 @@
+/* import style for forms
+--------------------------------------------------------
+
+*/
+@import url(forms.css);
+@import url(table.css);
+
+
+/* general
+--------------------------------------------------------
+
+*/
+html,body{margin:0;padding:0;} /* Common margin & padding for all browsers */
+html{overflow-y:scroll;} /* Always display the scrollbar, avoid flipping pages */
+html {background: #DED3DB url('../img/back.png') fixed;}
+body {
+  color: #606060;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: 'Average Sans', sans-serif;
+}
+h1, h2, h3, h4 {
+  font-family: 'Noticia Text', serif;
+  font-weight: normal;
+  color: gray;
+}
+h1 {
+  font-size: 1.8em;
+  line-height: 1.2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+p {
+  line-height: 1.5em;
+  margin: 0 2em 0.5em 0;
+}
+hr { color: silver;}
+img {border:0;} /* No border around linked images */
+a:link    {color: #606060; font-size: 75%; text-decoration: none;}
+a:visited {color: #808080;}
+a:hover   { text-decoration:underline;  color: #333333; }
+a:active  { }
+
+/* html5 elements
+--------------------------------------------------------
+*/
+header,footer,nav,article,section,
+aside,figure,figcaption,output {display:block;}
+
+
+/* page structure
+--------------------------------------------------------
+
+  Layout and size of header, content and footer
+*/
+
+/* the header with related links navigation */
+header#above {
+  padding: 5px;
+  border-bottom:1px solid #B0B0B0;
+  color:#000;
+  background: rgba(224,224,224,0.75);
+  position: fixed;
+  width: 100%;
+  -moz-box-shadow: 0px 2px 5px #888;
+  -webkit-box-shadow: 0px 2px 5px #888;
+  box-shadow: 0px 2px 5px #888;
+}
+header#top, div#content, div#footer {
+  width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 0.5em 1.5em;
+  border-left: 1px solid #606060;
+  border-right: 1px solid #606060;
+}
+header#top {
+  padding-top: 2em;
+}
+
+/* add common padding to main content block */
+div#content{
+  min-height: 300px;
+}
+
+/* Container -----------------------------------------------------
+*/
+article p {
+  letter-spacing: 0.05em;
+  line-height: 1.2em;
+}
+div#content aside.left {
+  width: 22%;
+}
+div#content article.right {
+  width: 72%;
+}
+
+/* article byline & signature
+--------------------------------------------------------
+
+*/
+footer.byline {
+  clear: both;
+  border-top: 1px dashed #999999;
+  margin-top:2em;
+  padding: 1em;
+  color: #555555;
+}
+footer.byline blockquote {
+  font-size: 0.9em;
+  font-family: 'Noticia Text', serif;
+}
+footer.byline img {padding:2px;outline:#999999 groove 1px;}
+
+/* footer --------------------------------------------------------
+ */
+
+/* add padding and background to the footer block */
+
+div#footer {
+  padding-top: 2em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#909090), to(#fff));
+  background: -moz-linear-gradient(top,  #909090,  #fff);
+}
+footer#bottom {
+  padding-bottom: 2em;
+  font-weight: bold;
+  font-family: 'Noticia Text', serif;
+}
+footer#bottom a {
+  font-size: 1em;
+  text-decoration:none;
+  color: #606060;
+  font-weight: normal;
+}
+footer#bottom a:after {
+  content: " |";
+}
+footer#bottom a:link    { }
+footer#bottom a:visited { }
+footer#bottom a:hover   { text-decoration:underline;  color: #333333; }
+footer#bottom a:active  { }
+
+/* header --------------------------------------------------------
+ */
+
+div#logo {
+  margin: 1em 0;
+}
+
+/* navigation menu
+--------------------------------------------------------
+
+*/
+nav ul li {
+  list-style-type: none;
+}
+nav.related a:link {
+  font-size: 75%;
+  color: #333;
+}
+nav.related a:hover {
+  color: blue;
+}
+
+nav.related a.active {
+  color: #333;
+  text-decoration: none;
+  cursor: default;
+  font-weight: bold;
+}
+
+nav.navmenu {
+    display: block;
+    padding: 0.2em 1em 0 1em;
+    background: #E0E0E0;
+    border-bottom: 2px solid #B0B0B0;
+}
+nav.navmenu a {
+    padding: 0.2em 1em 0.1em 1em;
+    color: #555555;
+    font-size: 1em;
+    text-decoration:none;
+    font-family: 'Noticia Text', serif;
+}
+nav.navmenu a:link    { }
+nav.navmenu a:visited { }
+nav.navmenu a:hover   { color: #111111; background: #999999; }
+nav.navmenu a:active  { }
+
+/* highlight current choice in navigation menu
+--------------------------------------------------------
+
+*/
+body#me a#me-,
+body#report a#report-,
+body#style a#style-,
+body#guide a#guide-,
+body#blokket a#blokket-,
+body#source a#source-,
+body#test a#test- {background:#858585;border:2px solid #656565; }
+
+/* figure & figcaption
+--------------------------------------------------------
+
+*/
+figure {border:1px solid #E6E6E6;padding:0.25em;margin:1em;}
+figcaption {font-style:italic;font-size:smaller;padding-left:1em;}
+
+figure.right{margin-right:0;}
+figure.top{margin-top:0;}
+figure.fullwidth{margin-left:0;margin-right:0;}
+
+img.me {
+  float:left;
+  margin: 1em 1.2em 1em 1em;
+}
+
+/* Up arrows
+--------------------------------------------------------
+
+*/
+
+a.back-to-top {
+  width: 32px;
+  height: 32px;
+  display: block;
+  font-size: 1.05em;
+  font-weight: bold;
+  line-height: 32px;
+  text-indent: -9999px;
+  background: #fff url(http://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Arrow-up-dash-small.svg/32px-Arrow-up-dash-small.svg.png) no-repeat right bottom;
+}
+a.back-to-top:hover {
+  background: #fff url(http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Arrow-up-dash-2.0.svg/32px-Arrow-up-dash-2.0.svg.png) no-repeat right bottom;
+  text-decoration: underline;
+}
+a.back-to-top:visited {
+  color: #000;
+}
+
+/* Misc classes
+--------------------------------------------------------
+
+*/
+.right {float:right; margin-right: 20px;}
+.left {float:left; margin-right: 10px;}
+
+.small {
+  font-size: .8em;
+  margin-bottom: 1.875em;
+  line-height: 1.875em;
+}
+.quiet {
+  color: #666; font-family: 'Times New Roman', serif;
+}
+
+/* clearer fix */
+div#content {overflow:auto;}
+
+
+/* Test pages
+--------------------------------------------------------
+
+*/
+#test nav.left {
+  width: 25%;
+}
+nav.vmenu ul,
+nav.left ul {
+  padding:0 ;
+}
+#test article.left {
+  width: 70%;
+}
+#test div.ofx {
+  overflow-x: scroll;
+}
+#test table,
+blockquote.code {
+  font-family: monospace;
+  font-size: 90%;
+  white-space: pre;
+  background: #F2F2F2;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0.5em;
+  border: 1px solid #999;
+  line-height: 1.2em;
+}
