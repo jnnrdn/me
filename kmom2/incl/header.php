@@ -8,7 +8,7 @@
   <!-- Links to external style sheets -->
   <link rel="stylesheet" type="text/css" href="style/stylesheet.css" title="General stylesheet">
   <link rel="alternate stylesheet" type="text/css" href="style/debug.css" title="Debug stylesheet">
-  
+
   <link rel="shortcut icon" href="favicon.ico">
 
   <!-- Each page can set $pageStyle to create additional style -->
