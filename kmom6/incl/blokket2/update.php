@@ -1,53 +1,51 @@
 <?php
 //
-// Set up the path and read the directory, store all files in array $files
+// Connect to the database
 //
-$path = dirname(__FILE__) . "/data/";
-$files = readDirectory($path);
+$db = new PDO("sqlite:$dbPath");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, but continue script
 
 
-//
-// Check that the filename is valid by checking that it exists in the $files array.
-//
-$filename = null;
-$isWritable = null;
-if(isset($_POST['file']) && in_array($_POST['file'], $files))
-{
-  $filename = $path . $_POST['file'];
-  if(is_writable($filename))
-  {
-    $isWritable = true;
-  }
-  else
-  {
-    $isWritable = false;
-  }
-}
 
 
 //
 // Check if Save-button was pressed, save the file if true.
 //
 if(isset($_POST['doSave'])) {
-  $res = putFileContents($filename, strip_tags($_POST['content'], "<b><i><p><img>"));
+  $strip = "<b><i><p><img>";
+
+  // Add all form entries to an array
+  $ad[] = strip_tags($_POST["title"], $strip);
+  $ad[] = strip_tags($_POST["description"], $strip);
+  $ad[] = strip_tags($_POST["image"], $strip);
+  $ad[] = strip_tags($_POST["id"], $strip);
+
+  $stmt = $db->prepare("UPDATE Ads SET title=?, description=?, image=? WHERE id=?");
+  $stmt->execute($ad);
+  $output = "Uppdaterade annonsen. Rowcount is = " . $stmt->rowCount() . ".";
 }
 
 
 //
-// Create a select/option-list based on the content of the array $files
+// Create a select/option-list of the ads
 //
-$select = "<select id='input1' name='file' onchange='form.submit();'>";
+$stmt = $db->prepare('SELECT * FROM Ads;');
+$stmt->execute();
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$current = null;
+
+$select = "<select id='input1' name='ads' onchange='form.submit();'>";
 $select .= "<option value='-1'>Välj Annons</option>";
-foreach($files as $val)
-{
+foreach($res as $ad) {
   $selected = "";
-  if(isset($_POST['file']) && $_POST['file'] == $val)
-  {
+  if(isset($_POST['ads']) && $_POST['ads'] == $ad['id']) {
     $selected = "selected";
+    $current = $ad;
   }
-  $select .= "<option value='{$val}' {$selected}>{$val}</option>";
+  $select .= "<option value='{$ad['id']}' {$selected}>{$ad['title']} ({$ad['id']})</option>";
 }
 $select .= "</select>";
+
 
 
 ?>
@@ -58,32 +56,35 @@ $select .= "</select>";
 
 <form method="post">
   <fieldset>
+    <input type="hidden" name="id" value="<?php echo $current['id']; ?>">
+
     <p>
       <label for="input1">Annonser:</label><br>
       <?php echo $select; ?>
     </p>
 
     <p>
-      <textarea style="width:100%;" name="content"><?php if($filename) echo getFileContents($filename); ?></textarea>
+      <label for="input1">Titel:</label><br>
+      <input type="text" class="text" name="title" value="<?php echo $current['title']; ?>">
     </p>
 
     <p>
-      <input type="submit" name="doSave" value="Spara" <?php if(!$isWritable) echo "disabled";  ?>>
+      <label for="input1">Bildlänk (relativ på servern eller direkt med http://server.com/bild.png):</label><br>
+      <input type="link" class="text" name="image" value="<?php echo $current['image']; ?>">
+    </p>
+
+    <p>
+      <textarea style="width:100%;" name="description"><?php echo $current['description']; ?></textarea>
+    </p>
+
+    <p>
+      <input type="submit" name="doSave" value="Spara" <?php if(!isset($current['id'])) echo "disabled";  ?>>
       <input type="reset" value="Ångra">
     </p>
 
-    <?php if($isWritable === false): ?>
-    <p class="info">Filen är ej skrivbar. Gör den skrivbar med chmod 666 för att göra det möjligt att editera filen och spara dina ändringar.</p>
-    <?php endif; ?>
-
-    <?php if(isset($res)): ?>
-    <p><output class="success"><?php echo $res ?></output></p>
+    <?php if(isset($output)): ?>
+    <p><output class="success"><?php echo $output; ?></output></p>
     <?php endif; ?>
 
   </fieldset>
 </form>
-
-<p>Detta formulär är ett "self-submitting"-formulär, det postar sig till sig själv.</p>
-<p>Formuläret använder funktioner från filen <code>src/common.php</code>, <code>getFileContents()</code> läser innehållet
-från en fil på disk och <code>putFileContents()</code> skriver innehåll till en fil på disk.
-<a href="viewsource.php?dir=src&amp;file=common.php#file">Källkoden till funktionerna hittar du här</a>.</p>
