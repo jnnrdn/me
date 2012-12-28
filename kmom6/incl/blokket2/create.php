@@ -1,41 +1,34 @@
 <?php
 //
-// Set up the path and read the directory, store all files in array $files
+// Connect to the database
 //
-$path = dirname(__FILE__) . "/data/";
-$files = readDirectory($path);
+$db = new PDO("sqlite:$dbPath");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, but continue script
 
 
 //
-// Check if Create-button was pressed, create a new file. Do some checks before actually
-// creating the file.
+// Check if Save-button was pressed, save the ad if true.
 //
 if(isset($_POST['doCreate'])) {
-  $filename = $path . basename(trim(strip_tags($_POST['filename'])));
-  if(empty($_POST['filename']))
-  {
-    $res = "Filen skapades ej, filnamnet kan ej vara tomt. Välj ett annat filnamn.";
-  }
-  else if(is_file($filename))
-  {
-    $res = "Filen skapades ej, den finns redan. Välj ett annat filnamn.";
-  }
-  else
-  {
-    file_put_contents($filename, null);
-    $res = "Filen skapades.";
-    $files = readDirectory($path);
-  }
+
+  $ad[] = strip_tags($_POST["title"], "<b><i><p><img>");
+
+  $stmt = $db->prepare("INSERT INTO Ads (title) VALUES (?)");
+  $stmt->execute($ad);
+  $output = "Lade till en ny annons med id " . $db->lastInsertId() . ". Rowcount is = " . $stmt->rowCount() . ".";
 }
 
 
 //
-// Create a select/option-list based on the content of the array $files
+// Create a select/option-list of the ads
 //
-$select = "<select multiple id='input1' name='file'>";
-foreach($files as $val)
-{
-  $select .= "<option value='{$val}'>{$val}</option>";
+$stmt = $db->prepare('SELECT * FROM Ads;');
+$stmt->execute();
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$select = "<select id='input1' multiple name='ads'>";
+foreach($res as $ad) {
+  $select .= "<option value='{$ad['id']}'>{$ad['title']} ({$ad['id']})</option>";
 }
 $select .= "</select>";
 
@@ -54,8 +47,8 @@ $select .= "</select>";
     </p>
 
     <p>
-      <label for="input2">Ny annons:</label><br>
-      <input id="input2" name="filename">
+      <label for="input2">Titel på ny annons:</label><br>
+      <input id="input2" class="text" name="title">
     </p>
 
     <p>
@@ -63,8 +56,8 @@ $select .= "</select>";
       <input type="reset" value="Ångra">
     </p>
 
-    <?php if(isset($res)): ?>
-    <p><output class="info"><?php echo $res ?></output></p>
+    <?php if(isset($output)): ?>
+    <p><output class="info"><?php echo $output ?></output></p>
     <?php endif; ?>
 
 
