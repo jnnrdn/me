@@ -1,9 +1,16 @@
 <?php
 //
-// Set up the path and read the directory, store all files in array $files
+// Connect to the database
 //
-$path = dirname(__FILE__) . "/data/";
-$files = readDirectory($path);
+$db = new PDO("sqlite:$dbPath");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, but continue script
+
+//
+// Read from database
+//
+$stmt = $db->prepare('SELECT * FROM Ads;');
+$stmt->execute();
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -13,15 +20,17 @@ $files = readDirectory($path);
   <caption><em>Samtliga annonser i Blokket.</em></caption>
 
   <tr>
-    <th>Filnamn:</th>
-    <th>Text:</th>
+    <th>Titel:</th>
+    <th>Bild:</th>
+    <th>Beskrivning:</th>
   </tr>
 
-  <?php foreach($files as $val): ?>
+  <?php foreach($res as $ad): ?>
 
   <tr>
-    <td><?php echo $val; ?></td>
-    <td><?php echo getFileContents($path . $val); ?></td>
+    <td><?php echo $ad['title']; ?></td>
+    <td><img src="<?php echo $ad['image']; ?>"></td>
+    <td><?php echo $ad['description']; ?></td>
   </tr>
 
   <?php endforeach; ?>

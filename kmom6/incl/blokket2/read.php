@@ -1,34 +1,28 @@
 <?php
 //
-// Set up the path and read the directory, store all files in array $files
+// Connect to the database
 //
-$path = dirname(__FILE__) . "/data/";
-$files = readDirectory($path);
+$db = new PDO("sqlite:$dbPath");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, but continue script
 
 
 //
-// Check that the filename is valid by checking that it exists in the $files array.
+// Create a select/option-list of the ads
 //
-$filename = null;
-if(isset($_POST['file']) && in_array($_POST['file'], $files))
-{
-  $filename = $path . $_POST['file'];
-}
+$stmt = $db->prepare('SELECT * FROM Ads;');
+$stmt->execute();
+$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$current = null;
 
-
-//
-// Create a select/option-list based on the content of the array $files
-//
-$select = "<select id='input1' name='file' onchange='form.submit();'>";
+$select = "<select id='input1' name='ads' onchange='form.submit();'>";
 $select .= "<option value='-1'>Välj Annons</option>";
-foreach($files as $val)
-{
+foreach($res as $ad) {
   $selected = "";
-  if(isset($_POST['file']) && $_POST['file'] == $val)
-  {
+  if(isset($_POST['ads']) && $_POST['ads'] == $ad['id']) {
     $selected = "selected";
+    $current = $ad;
   }
-  $select .= "<option value='{$val}' {$selected}>{$val}</option>";
+  $select .= "<option value='{$ad['id']}' {$selected}>{$ad['title']} ({$ad['id']})</option>";
 }
 $select .= "</select>";
 
@@ -46,11 +40,15 @@ $select .= "</select>";
       <?php echo $select; ?>
     </p>
 
-    <p>
-      <div style="background:#eee; border:1px solid #999;padding:1em;">
-        <p><?php if($filename) echo getFileContents($filename); ?></p>
-      </div>
-    </p>
+    <?php if(isset($current)): ?>
+      <p>
+        <div style="background:#eee; border:1px solid #999;padding:1em; overflow:auto;">
+          <h2><?php echo $current['title']; ?></h2>
+          <img src="<?php echo $current['image']; ?>" class="left">
+          <p><?php echo $current['description']; ?></p>
+        </div>
+      </p>
+    <?php endif; ?>
 
   </fieldset>
 </form>
