@@ -2,6 +2,9 @@
 include("incl/config.php");
 $pageId = "blokket2";
 
+// Path to the SQLite database file
+$dbPath = dirname(__FILE__) . "/incl/blokket2/data/blokket2.sqlite";
+
 // Check if the url contains a querystring with a page-part.
 $p = null;
 if(isset($_GET["p"]))

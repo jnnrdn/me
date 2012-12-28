@@ -1,8 +1,8 @@
 <h1>Initiera och kontrollera annonsdatabasen</h1>
 
-<p>Databasfilen sparas i katalogen:<br/><code><?php echo dirname($dbPath); ?></code></p>
+<p>Databasfilen sparas i katalogen:<br><code><?php echo dirname($dbPath); ?></code></p>
 
-<?php if(is_writable($dbPath)): ?>
+<?php if(is_writable(dirname($dbPath))): ?>
   <p class="success">Katalogen är skrivbar.</p>
 <?php else: ?>
   <p class="alert">Katalogen är ej skrivbar. Skapa katalogen och gör den skrivbar.</p>
